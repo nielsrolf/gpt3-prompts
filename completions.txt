@@ -1,0 +1,133 @@
+Code:
+def print_circle(radius):
+    circle = ""
+    for i in range(-radius, radius):
+        for i in range(-radius, radius):
+            if i**2 + j**2 > radius**2:
+                circle += " "
+            else:
+                circle += "x"
+        circle += "\n"
+    print(circle)
+
+print_circle(10)
+
+Output:
+Traceback (most recent call last):
+  File "circle.py", line 12, in <module>
+    print_circle(10)
+  File "circle.py", line 5, in print_circle
+    if i**2 + j**2 > radius**2:
+NameError: name 'j' is not defined
+
+Fixed:
+def print_circle(radius):
+    circle = ""
+    for i in range(-radius, radius):
+        for j in range(-radius, radius):
+            if i**2 + j**2 > radius**2:
+                circle += " "
+            else:
+                circle += "x"
+        circle += "\n"
+    print(circle)
+
+print_circle(10)
+
+
+Code:
+import math
+
+def sqrt(i, eps):
+    """Finds the square root of i with an error of at most eps"""
+    r = i / 2
+    while math.abs(i / r - r) > eps:
+        r = (i / r + r) / 2
+    return r
+
+print(sqrt(9, 0.1), sqrt(16, 0.1), sqrt(20, 0.1))
+
+Output:
+Traceback (most recent call last):
+  File "sqrt.py", line 10, in <module>
+    print(sqrt(9, 0.1), sqrt(16, 0.1), sqrt(20, 0.1))
+  File "sqrt.py", line 6, in sqrt
+    while math.abs(i / r - r) > eps:
+AttributeError: module 'math' has no attribute 'abs'
+
+Fixed:
+def sqrt(i, eps):
+
+print(sqrt(9, 0.1), sqrt(16, 0.1), sqrt(20, 0.1))
+
+
+Code:
+def print_circle(radius):
+
+circle = ""
+
+for i in range(-radius, radius):
+
+for j in range(-radius, radius):
+
+if i**2 + j**2 > radius**2:
+
+circle += " "
+
+else:
+
+circle += "x"
+
+circle += "\n"
+
+print(circle)
+
+print_circle(10)
+
+Output:
+
+Traceback (most recent call last):
+
+File "circle.py", line 12, in <module>
+print_circle(10)
+File "circle.py", line 5, in print_circle
+if i**2 + j**2 > radius**2:
+NameError: name 'j' is not defined
+
+Fixed:
+def print_circle(radius):
+
+circle = ""
+
+for i in range(-radius, radius):
+
+for j in range(-radius, radius):
+
+if i**2 + j**2 > radius**2:
+
+circle += " "
+
+else:
+
+circle += "x"
+
+circle += "\n"
+
+print(circle)
+
+print_circle(10)
+
+
+Code:
+def print_circle(radius):
+
+circle = ""
+
+for i in range(-radius, radius):
+
+for j in range(-radius, radius):
+
+if i**2 + j**2 > radius**2:
+
+circle += " "
+

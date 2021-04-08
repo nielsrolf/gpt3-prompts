@@ -1,0 +1,73 @@
+Notes:
+- pitch relates to fundamental frequency, but is more perceptual
+- even 8 moths old children percieve pitch, showing it is important to humans
+- musicians can train to improve their pitch sensitivity [36]
+- relevant to music and speech
+- speech: usually 70–1000Hz, fluctuates fast [6]
+- music: 30–4000Hz [31]
+
+Text:
+Rather than a physical quantity contained in the signal, pitch is a percept that is strongly correlated
+with the fundamental frequency of a sound. While physically elusive, pitch is a natural dimension to
+consider when comparing sounds. Children as young as 8 months old are sensitive to melodic contour
+[65], implying that an early and innate sense of relative pitch is important to parsing our auditory
+experience. This basic ability is distinct from the acute pitch sensitivity of professional musicians,
+which improves as a function of musical training [36].
+Pitch is important to both music and speech signals. Typically, speech pitch is more narrowly
+circumscribed than music, having a range of 70–1000Hz, compared to music which spans roughly
+the range of a grand piano, 30–4000Hz [31]. Pitch in speech signals also fluctuates more rapidly [6].
+
+Notes:
+- wavenet is a dnn for generating raw audio
+- probsabilistic autoregressive: each predicted sample is conditioned on all previous samples
+- can be trained efficiently on long audio
+- sota on English, Mandarin text to speech, more natural than concatenative systems
+- wavenet can learn multiple speackers by conditio on speaker identity
+- can also be trained to generate realistic and new musical fragments
+- can also be used as classifier for phoneme recognition
+
+Text:
+This paper introduces WaveNet, a deep neural network for generating raw audio
+waveforms. The model is fully probabilistic and autoregressive, with the predictive distribution for each audio sample conditioned on all previous ones; nonetheless we show that it can be efficiently trained on data with tens of thousands of
+samples per second of audio. When applied to text-to-speech, it yields state-ofthe-art performance, with human listeners rating it as significantly more natural
+sounding than the best parametric and concatenative systems for both English and
+Mandarin. A single WaveNet can capture the characteristics of many different
+speakers with equal fidelity, and can switch between them by conditioning on the
+speaker identity. When trained to model music, we find that it generates novel and
+often highly realistic musical fragments. We also show that it can be employed as
+a discriminative model, returning promising results for phoneme recognition.
+
+Notes:
+- Common NLP approach: pretrain a model on large text corpus, then fine-tune on a specific task
+- task agnostic architecture but task specific datasets required (with >10k samples)
+- in contrast humans just need a task description or a few examples
+- scaling up language models gets us closer to that, few-shot performance sometimes approaches previous sota using finetuning
+- our model: GPT-3: autoregressive language model with 175 billion params, 10x more than previous largest non sparse model
+- test tasks in few shot setup without gradient updates, only use text interaction with model
+- works well for many datasets incl translation, quenstion answering, cloze tasks, tasks that require on-the-fly reasoning, domain adaptation like unscarmbling words or using a new word, 3-digit arithmetic
+
+Text:
+Recent work has demonstrated substantial gains on many NLP tasks and benchmarks by pre-training
+on a large corpus of text followed by fine-tuning on a specific task. While typically task-agnostic
+in architecture, this method still requires task-specific fine-tuning datasets of thousands or tens of
+thousands of examples. By contrast, humans can generally perform a new language task from only
+a few examples or from simple instructions – something which current NLP systems still largely
+struggle to do. Here we show that scaling up language models greatly improves task-agnostic,
+few-shot performance, sometimes even reaching competitiveness with prior state-of-the-art finetuning approaches. Specifically, we train GPT-3, an autoregressive language model with 175 billion
+parameters, 10x more than any previous non-sparse language model, and test its performance in
+the few-shot setting. For all tasks, GPT-3 is applied without any gradient updates or fine-tuning,
+with tasks and few-shot demonstrations specified purely via text interaction with the model. GPT-3
+achieves strong performance on many NLP datasets, including translation, question-answering, and
+cloze tasks, as well as several tasks that require on-the-fly reasoning or domain adaptation, such as
+unscrambling words, using a novel word in a sentence, or performing 3-digit arithmetic.
+
+
+Notes:
+- consider audio to audio losses for generative machine learning models
+- other authors showed: multi scale spectrogram losses do not provide useful gradients for finding the pitch
+- same holds for spectral centroid, even though they have a perfect global loss landscape
+- reason: wobbly  loss surface  on a small scale makes gradients point into random directions
+- aim of this work: find loss function that approximates spectral centroid and has a smooth surface
+- if successful, it can be used to train networks to extract pitch
+
+Text:
