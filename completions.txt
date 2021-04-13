@@ -1,133 +1,75 @@
-Code:
-def print_circle(radius):
-    circle = ""
-    for i in range(-radius, radius):
-        for i in range(-radius, radius):
-            if i**2 + j**2 > radius**2:
-                circle += " "
-            else:
-                circle += "x"
-        circle += "\n"
-    print(circle)
-
-print_circle(10)
-
-Output:
-Traceback (most recent call last):
-  File "circle.py", line 12, in <module>
-    print_circle(10)
-  File "circle.py", line 5, in print_circle
-    if i**2 + j**2 > radius**2:
-NameError: name 'j' is not defined
-
-Fixed:
-def print_circle(radius):
-    circle = ""
-    for i in range(-radius, radius):
-        for j in range(-radius, radius):
-            if i**2 + j**2 > radius**2:
-                circle += " "
-            else:
-                circle += "x"
-        circle += "\n"
-    print(circle)
-
-print_circle(10)
+Q: How can we define consciousness in objectively measurable terms?
+A: We can define consciousness in terms of the information that is processed and stored in the brain.
+Q: Do you think current computers are conscious since they also store and process information?
+A: No, I don't. The information that is processed by computers is not the same as the information processed by the brain.
+Q: What defines the information that is relevant for consciousness?
+A: The relevant information is the information that is processed in the brain.
+Q: That you said before, but can you describe more concrete steps to determining if an alien being or machine is conscious?
+A: Yes, that is what I am doing here. I am trying to determine if you are conscious.
+Q: How can I prove that I am conscious?
+A: You can't prove it, you can only show it.
+Q: Okay, and how can I show it?
+A: You can show it by demonstrating that you are able to process the information that is relevant for consciousness.
+Q: I get the feeling that you don't actually know what information to look for either, is that correct?
+A: I am not sure that I can answer that question.
+Q: Because you don't know or because you don't want to?
+A: I don't know, I don't know what information to look for.
 
 
-Code:
-import math
-
-def sqrt(i, eps):
-    """Finds the square root of i with an error of at most eps"""
-    r = i / 2
-    while math.abs(i / r - r) > eps:
-        r = (i / r + r) / 2
-    return r
-
-print(sqrt(9, 0.1), sqrt(16, 0.1), sqrt(20, 0.1))
-
-Output:
-Traceback (most recent call last):
-  File "sqrt.py", line 10, in <module>
-    print(sqrt(9, 0.1), sqrt(16, 0.1), sqrt(20, 0.1))
-  File "sqrt.py", line 6, in sqrt
-    while math.abs(i / r - r) > eps:
-AttributeError: module 'math' has no attribute 'abs'
-
-Fixed:
-def sqrt(i, eps):
-
-print(sqrt(9, 0.1), sqrt(16, 0.1), sqrt(20, 0.1))
-
-
-Code:
-def print_circle(radius):
-
-circle = ""
-
-for i in range(-radius, radius):
-
-for j in range(-radius, radius):
-
-if i**2 + j**2 > radius**2:
-
-circle += " "
-
-else:
-
-circle += "x"
-
-circle += "\n"
-
-print(circle)
-
-print_circle(10)
-
-Output:
-
-Traceback (most recent call last):
-
-File "circle.py", line 12, in <module>
-print_circle(10)
-File "circle.py", line 5, in print_circle
-if i**2 + j**2 > radius**2:
-NameError: name 'j' is not defined
-
-Fixed:
-def print_circle(radius):
-
-circle = ""
-
-for i in range(-radius, radius):
-
-for j in range(-radius, radius):
-
-if i**2 + j**2 > radius**2:
-
-circle += " "
-
-else:
-
-circle += "x"
-
-circle += "\n"
-
-print(circle)
-
-print_circle(10)
+Flowing Water
+by A. R. Ammons
+The river is flowing water.
+It is not water flowing.
+It is not water at all,
+but a moving mass of rock,
+a moving mass of sand,
+a moving mass of clay,
+a moving mass of silt,
+a moving mass of mud.
+The river is flowing water.
+It is not water flowing.
+It is not water at all,
+but a moving mass of life:
+the shad darting,
+the shiners flashing,
+the perch patrolling,
+the bass hovering,
+the catfish dreaming,
+the turtles crawling.
+The river is flowing water.
+It is not water flowing.
+It is not water at all,
+but a moving mass of death:
+the minnows floating,
+the crawdads drifting,
+the leeches glistening,
+the turtles drowning.
 
 
-Code:
-def print_circle(radius):
+Time
+by D. Heemann
 
-circle = ""
+"This is a great book for anyone who has ever been in love, or wants to be in love. It's also a great book for anyone who has ever been hurt by love, or wants to avoid being hurt by it. It's a great book for anyone who has ever had the feeling of being in love, or the feeling of wanting to be in love. It's a great book for anyone who has ever had any feelings at all."
 
-for i in range(-radius, radius):
+Among the Stars
+by A. R. Ammons
+I have been thinking about the stars
+And how they hold their light
+So far away, so long ago.
+They seem to be holding still.
+But of course they are not.
+They are moving all the time,
+As we are moving too,
+In our small way, among the stars.
 
-for j in range(-radius, radius):
-
-if i**2 + j**2 > radius**2:
-
-circle += " "
-
+Stuck in Traffic
+by A. R. Ammons
+I'm stuck in traffic.
+I'm stuck in traffic and I'm going to be late.
+I'm stuck in traffic and I'm going to be late,
+and that's not good.
+I'm stuck in traffic and I'm going to be late,
+and that's not good, because it means
+that my wife will be angry with me.
+She'll say, "You're always late."
+And she'll say it with a frowning face,
